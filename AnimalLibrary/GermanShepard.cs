@@ -12,5 +12,13 @@ namespace AnimalLibrary {
             this.Muzzle = MuzzleType.Long;
 
         }
+
+        public override string GetTypeOfDog() { //use "override" to method in Parent
+            return "German Shepherd";
+        }
+
+        public GermanSheperd(string Name) : base(Name) { // :base(parameter) to inhert constructor from Parent "Call constructor from base class that takes one parameter
+         
+        }
     }
 }

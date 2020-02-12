@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace AnimalLibrary {
-    /*Enumeration 
+    /*Enumeration used to limit the options rather than use string type. Not nullable
     enum [Type] { option1, option 2, option3 }
     */
 
@@ -15,6 +15,13 @@ namespace AnimalLibrary {
         public bool ExtremeSenseOfSmell { get; set; } = false;
         public string Name { get; set; }
 
+        public virtual string GetTypeOfDog() { //use "virtual" to allow children to override
+            return "Dog";
+        }
+
+        public Dog(string Name) {
+            this.Name = Name;
+        }
         public Dog() { //default constructor
 
         }
